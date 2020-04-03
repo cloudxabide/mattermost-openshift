@@ -133,6 +133,8 @@ objects:
       port: 8065
       protocol: TCP
       targetPort: 8065
+      tls:
+        termination: edge
     selector:
       deploymentconfig: '${APPLICATION_NAME}'
 - kind: ConfigMap
@@ -154,4 +156,4 @@ parameters:
   displayName: Database Name
   name: DATABASE_NAME
   required: true
-  value: mattermost_test
+  value: mattermost
